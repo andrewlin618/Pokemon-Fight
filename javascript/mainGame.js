@@ -1,7 +1,11 @@
 var myPokemon;
 var enemyPokemons;
 var enemyNow;
-var 
+
+
+
+
+alert("Hello");
 
 //Pick my Pokemon;
 
