@@ -1,9 +1,18 @@
 var myPokemonPicked = false;
 var enemyPokemonPicked = 0;
 var myPokemon;
-var enemyPokemon1;
-var enemyPokemon2;
-var enemyPokemon3;
+var enemyPokemon;
+
+var myPokemonId;
+var enemyPokemonId1;
+var enemyPokemonId2;
+var enemyPokemonId3;
+
+var myHp;
+var myLevel;
+var enemyHp;
+var myDamage;
+var enemyDamage;
 
 function setPokemon(pokemonPicked, meOreEnemy) {
   switch (meOreEnemy) {
@@ -50,15 +59,99 @@ function wordsChangeAndFade(instructionText) {
   $("#instructionWord").fadeIn(100);
 }
 
-//Start Fighting;
-$(document).on('keypress', function (e) {
-  if (e.which == 13 && enemyPokemonPicked == 3) {
-      $("#pokemon-picking-page").hide();
+function changeToFightField(){
+  $("#pokemon-picking-page").removeClass("d-flex");
+  $("#pokemon-picking-page").addClass("d-none");
+
+  $("#pokemon-fighting-page").removeClass("d-none");
+  $("#pokemon-fighting-page").addClass("d-flex");
+
+  $("#fight-text-page").removeClass("d-none");
+  $("#fight-text-page").addClass("d-flex");
+
+  $("#fight-text").removeClass("d-none");
+  wordsChangeAndFade("Fight!");
+}
+
+function setUpForFight() {
+  switch (myPokemonId) {
+    case "pokemon004":
+      myPokemon = pokemon004;
+      $("#myPokemonFight").attr('src', "assets/images/pokemons/004.png");
+      break;
+    case "pokemon025":
+      myPokemon = pokemon025;
+      $("#myPokemonFight").attr('src', "assets/images/pokemons/025.png");
+      break;
+    case "pokemon147":
+      myPokemon = pokemon147;
+      $("#myPokemonFight").attr('src', "assets/images/pokemons/147.png");
+      break;
+    case "pokemon150":
+      myPokemon = pokemon150;
+      $("#myPokemonFight").attr('src', "assets/images/pokemons/150.png");
+      break;
+    case "pokemon216":
+      myPokemon = pokemon216;
+      $("#myPokemonFight").attr('src', "assets/images/pokemons/216.png");
+      break;
   }
-});
+  $("#myPokemonName").text(myPokemon.name);
+
+  switch (enemyPokemonId1) {
+    case "pokemon004":
+      enemyPokemon = pokemon004;
+      $("#enemyPokemonFight").attr('src', "assets/images/pokemons/004.png");
+      break;
+    case "pokemon025":
+      enemyPokemon = pokemon025;
+      $("#enemyPokemonFight").attr('src', "assets/images/pokemons/025.png");
+      break;
+    case "pokemon147":
+      enemyPokemon = pokemon147;
+      $("#enemyPokemonFight").attr('src', "assets/images/pokemons/147.png");
+      break;
+    case "pokemon150":
+      enemyPokemon = pokemon150;
+      $("#enemyPokemonFight").attr('src', "assets/images/pokemons/150.png");
+      break;
+    case "pokemon216":
+      enemyPokemon = pokemon216;
+      $("#enemyPokemonFight").attr('src', "assets/images/pokemons/216.png");
+      break;
+  }
+  $("#enemyPokemonName").text(enemyPokemon.name);
+
+  myHp = parseInt(myPokemon.hp);
+  myLevel = parseInt(myPokemon.level);
+
+  enemyHp = parseInt(enemyPokemon.hp);
+
+
+  //Set myPokemon Info.
+  $("#my-hp").text("HP = " + myHp);
+  $("#my-level").text("LEVEL = " + myLevel);
+  $("#my-attack").text("ATTACK = " + myPokemon.attack);
+  $("#my-defence").text("DEFENCE = " + myPokemon.defence);
+  if (myPokemonId == "pokemon025") {
+    $("#my-evolution").text("Evolution = ThunderStone")
+  }
+  else if (myPokemon.evolutionLevel == 100) {
+    $("#my-evolution").text("No more evolution...")
+  }
+  else {
+    $("#my-evolution").text("Evolution = Level " + myPokemon.evolutionLevel)
+  }
+
+  //Set enemyPokemon Info.
+  $("#enemy-hp").text("HP = " + enemyHp);
+  $("#enemy-attack").text("ATTACK = " + enemyPokemon.attack);
+  $("#enemy-defence").text("DEFENCE = " + enemyPokemon.defence);
+}
+
 
 //Picking Pokemon;
-$(".btn-success").on("click", function () {
+$(".btn-pickme").on("click", function () {
   //If done;
   if (enemyPokemonPicked >= 3) {
     return;
@@ -69,9 +162,11 @@ $(".btn-success").on("click", function () {
 
   //Pick my Pokemon;
   if (!myPokemonPicked) {
-    myPokemon = $(this).parent().parent().attr('data-pokemon')
-    setPokemon(myPokemon, "setMyPokemon");
+    myPokemonId = $(this).parent().parent().attr('pokemonId')
+    setPokemon(myPokemonId, "setMyPokemon");
     wordsChangeAndFade("Chose Your First Enemy!");
+    $(".btn-pickme").css('background-color', 'brown');
+    $(".btn-pickme").css('border-color', 'brown');
     myPokemonPicked = true;
     return;
   }
@@ -79,22 +174,35 @@ $(".btn-success").on("click", function () {
   //Pick enemy Pokemon;
   enemyPokemonPicked++;
   if (enemyPokemonPicked == 1) {
-    enemyPokemon1 = $(this).parent().parent().attr('data-pokemon')
-    setPokemon(enemyPokemon1, "setEnemyPokemon1");
-    wordsChangeAndFade("Chose Next Enemy!");
+    enemyPokemonId1 = $(this).parent().parent().attr('pokemonId')
+    setPokemon(enemyPokemonId1, "setEnemyPokemon1");
+    wordsChangeAndFade("Chose Your Second Enemy!");
   }
   else if (enemyPokemonPicked == 2) {
-    enemyPokemon2 = $(this).parent().parent().attr('data-pokemon')
-    setPokemon(enemyPokemon2, "setEnemyPokemon2");
-    wordsChangeAndFade("Chose Next Enemy!");
+    enemyPokemonId2 = $(this).parent().parent().attr('pokemonId')
+    setPokemon(enemyPokemonId2, "setEnemyPokemon2");
+    wordsChangeAndFade("Chose Your Last Enemy!");
   }
   else {
-    enemyPokemon3 = $(this).parent().parent().attr('data-pokemon')
-    setPokemon(enemyPokemon3, "setEnemyPokemon3");
-    wordsChangeAndFade("Press Enter to start!");
-    $(this).parent().parent().parent().fadeTo(100,1);
+    enemyPokemonId3 = $(this).parent().parent().attr('pokemonId')
+    setPokemon(enemyPokemonId3, "setEnemyPokemon3");
+    $(this).parent().parent().parent().fadeTo(100, 1);
+    changeToFightField();
+    setUpForFight();
   }
 });
 
+
+//Press "Attack";
+$("#btn-attack").on("click", function () {
+
+
+});
+
+//Press "Recover";
+$("#btn-recover").on("click", function () {
+  myHp = parseInt(myPokemon.hp);
+  $("#my-hp").text("HP = " + myHp);
+});
 
 
