@@ -21,6 +21,10 @@ var pokemon3 = pokemon147;
 var pokemon150 = { hp: "106", level: "5", attack: "154", defence: "90", evolutionLevel: 100 }
 var pokemon1 = pokemon150;
 
+//Features for Teddiursa
+var pokemon216 = { hp: "60", level: "5", attack: "80", defence: "50", evolutionLevel: 30 }
+var pokemon217 = { hp: "90", level: "5", attack: "130", defence: "75", evolutionLevel: 100 }
+
 
 //add functions for Pokemon
 function evolution(pokemon) {

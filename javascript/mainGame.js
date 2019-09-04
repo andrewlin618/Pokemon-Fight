@@ -5,8 +5,6 @@ var enemyNow;
 
 
 
-alert("Hello");
-
 //Pick my Pokemon;
 
 //Confirm my select and game start;
