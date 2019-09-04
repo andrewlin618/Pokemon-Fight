@@ -1,3 +1,5 @@
+const DMI = 15
+
 var myPokemonPicked = false;
 var enemyPokemonPicked = 0;
 var myPokemon;
@@ -14,8 +16,10 @@ var enemyHp;
 var myDamage;
 var enemyDamage;
 
+
+
 //Picking Pokemon;
-$(".btn-pickme").on("click", function (){
+$(".btn-pickme").on("click", function () {
   //If done;
   if (enemyPokemonPicked >= 3) {
     return;
@@ -58,13 +62,50 @@ $(".btn-pickme").on("click", function (){
 
 // Press "Attack";
 $(".btn-attack").on("click", function () {
-  alert("TODO:!!!!!");
+  myDamage = 0.5 * Math.floor((0.8 + 0.4 * Math.random()) * myPokemon.attack * DMI / (enemyPokemon.defense + DMI));
+  enemyHp = enemyHp - myDamage;
+
+  //Enemy died;
+  if (enemyHp <= 0) {
+    $("#enemy-hp").text("HP = " + 0);
+    $(".enemy-blood-bar").width("0%");
+    $(".fight-text").text(myPokemon.name + " has beaten the " + enemyPokemon.name + " !");
+    myLevel++;
+    $("#my-level").text("LEVEL = " + myLevel);
+    // TODO:Fight the next enemy;
+  }
+
+  //Enemy did not die;
+  else {
+    enemyDamage = 0.5 * Math.floor((0.8 + 0.4 * Math.random()) * enemyPokemon.attack * DMI / (myPokemon.defense + DMI));
+    myHp = myHp - enemyDamage;
+    if (myHp < 0) {
+      $("#my-hp").text("HP = " + 0);
+      $(".my-blood-bar").width("0%");
+      gameOver();
+    }
+    else {
+      myLevel++;
+      $("#my-level").text("LEVEL = " + myLevel);
+
+      $("#my-hp").text("HP = " + myHp);
+      $(".my-blood-bar").width(myToPercent(myHp / myPokemon.hp));
+
+      $("#enemy-hp").text("HP = " + enemyHp);
+      $(".enemy-blood-bar").width(myToPercent(enemyHp / enemyPokemon.hp));
+
+      $(".fight-text").text(myPokemon.name + " caused " + myDamage + " points damage to " + enemyPokemon.name + " ;   " + enemyPokemon.name + " caused " + enemyDamage + " points damage to " + myPokemon.name + ";");
+    }
+  }
+
+
 });
 
 //Press "Recover";
 $(".btn-recover").on("click", function () {
   myHp = parseInt(myPokemon.hp);
   $("#my-hp").text("HP = " + myHp);
+  $(".my-blood-bar").width("100%");
   $(".fight-text").text(myPokemon.name + " is fully recovered.")
 });
 

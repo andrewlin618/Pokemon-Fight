@@ -61,7 +61,7 @@ function printMyPokemonInfo() {
   $("#my-hp").text("HP = " + myHp);
   $("#my-level").text("LEVEL = " + myLevel);
   $("#my-attack").text("ATTACK = " + myPokemon.attack);
-  $("#my-defence").text("DEFENCE = " + myPokemon.defence);
+  $("#my-defense").text("DEFENSE = " + myPokemon.defense);
   if (myPokemonId == "pokemon025") {
     $("#my-evolution").text("Evolution = ThunderStone")
   }
@@ -76,7 +76,7 @@ function printMyPokemonInfo() {
 function printEnemyPokemonInfo() {
   $("#enemy-hp").text("HP = " + enemyHp);
   $("#enemy-attack").text("ATTACK = " + enemyPokemon.attack);
-  $("#enemy-defence").text("DEFENCE = " + enemyPokemon.defence);
+  $("#enemy-defense").text("DEFENSE = " + enemyPokemon.defense);
 }
 
 function setUpForFight() {
@@ -128,11 +128,11 @@ function setUpForFight() {
   }
   $("#enemyPokemonName").text(enemyPokemon.name);
 
-  myHp = parseInt(myPokemon.hp);
-  myLevel = parseInt(myPokemon.level);
+  myHp = myPokemon.hp;
+  myLevel = myPokemon.level;
   printMyPokemonInfo();
 
-  enemyHp = parseInt(enemyPokemon.hp);
+  enemyHp = enemyPokemon.hp;
   printEnemyPokemonInfo();
 }
 
@@ -144,4 +144,14 @@ function evolution(pokemonForEvolution) {
     myPokemon = pokemon006; break;
 
   }
+}
+
+
+function gameOver(){
+  alert("You lose!")
+}
+
+
+function myToPercent(final) {
+  return Math.floor((final * 100))+"%";
 }
