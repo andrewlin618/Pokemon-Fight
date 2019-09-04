@@ -55,52 +55,52 @@
 
     <!-- The pokemons picking page; -->
     <div id="pokemon-picking-page" class="container-fluid d-flex justify-content-center">
-        <div class="card m-2" style="width: 16rem;" pokemonId="pokemon004">
+        <div class="card m-2" style="width: 16rem;" pokemonId="004">
             <img src="assets/images/pokemons/004.png" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Charmander</h5>
                 <p class="card-text">HP = 39 <br>ATTACK = 60<br>DEFENSE = 50<br><br>EVOLUTION: Level 16</p>
-                <a href="#" class="btn btn-success btn-pickme">Pick Me</a>
+                <a href="#" class="btn btn-success btn-pickMe">Pick Me</a>
             </div>
         </div>
-        <div class="card m-2" style="width: 16rem;" pokemonId="pokemon025">
+        <div class="card m-2" style="width: 16rem;" pokemonId="025">
             <img src="assets/images/pokemons/025.png" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Pikachu</h5>
                 <p class="card-text">HP = 35 <br>ATTACK = 55<br>DEFENSE = 40<br><br>EVOLUTION = Thunderstone </p>
-                <a href="#" class="btn btn-success btn-pickme">Pick Me</a>
+                <a href="#" class="btn btn-success btn-pickMe">Pick Me</a>
             </div>
         </div>
-        <div class="card m-2" style="width: 16rem" pokemonId="pokemon147">
+        <div class="card m-2" style="width: 16rem" pokemonId="147">
             <img src="assets/images/pokemons/147.png" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Dratini</h5>
                 <p class="card-text">HP = 41 <br>ATTACK = 64<br>DEFENSE = 45<br><br>EVOLUTION = Level 30
                 </p>
-                <a href="#" class="btn btn-success btn-pickme">Pick Me</a>
+                <a href="#" class="btn btn-success btn-pickMe">Pick Me</a>
             </div>
         </div>
-        <div class="card m-2" style="width: 16rem" pokemonId="pokemon150">
+        <div class="card m-2" style="width: 16rem" pokemonId="150">
             <img src="assets/images/pokemons/150.png" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Mewtwo</h5>
-                <p class="card-text">HP = 106 <br>ATTACK = 154<br>DEFENSE = 90<br><br>EVOLUTION = N/A
+                <p class="card-text">HP = 106 <br>ATTACK = 154<br>DEFENSE = 90<br><br>EVOLUTION = No more evolution...
                 </p>
                 </p>
-                <button type="button" class="btn btn-success btn-pickme" data-toggle="button" aria-pressed="false"
+                <button type="button" class="btn btn-success btn-pickMe" data-toggle="button" aria-pressed="false"
                     autocomplete="off">
                     Pick Me!!!
                 </button>
             </div>
         </div>
-        <div class="card m-2" style="width: 16rem" pokemonId="pokemon216">
+        <div class="card m-2" style="width: 16rem" pokemonId="216">
             <img src="assets/images/pokemons/216.png" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Teddiursa</h5>
                 <p class="card-text">HP = 60 <br>ATTACK = 80<br>DEFENSE = 50<br><br>EVOLUTION = Level 30
                 </p>
                 </p>
-                <button type="button" class="btn btn-success btn-pickme" data-toggle="button" aria-pressed="false"
+                <button type="button" class="btn btn-success btn-pickMe" data-toggle="button" aria-pressed="false"
                     autocomplete="off">
                     Pick Me
                 </button>
@@ -129,12 +129,12 @@
         </div>
         <div class="m-2" style="width: 26rem;">
             <div class="row" style="width: 26rem;">
-                <img id="rotateImage" src="assets/images/icons/icon2.png" style="width: 26rem" alt="...">
+                <img src="assets/images/icons/icon2.gif" style="width: 26rem" alt="...">
             </div>
             <div class="row d-flex justify-content-center">
-                <a href="#" class="btn btn-danger btn-attack m-2">ATTACK</a>
-                <a href="#" class="btn btn-success btn-recover m-2">RECOVER</a>
-                <a href="#" class="btn btn-secondary btn-thunderstone m-2">Thunderstone</a>
+                <a id="attackButton" href="#" class="btn btn-danger btn-attack m-2">ATTACK</a>
+                <a id="recoverButton" href="#" class="btn btn-success btn-recover m-2">RECOVER</a>
+                <a id="thunderstoneButton" href="#" class="btn btn-secondary btn-thunderstone m-2">Thunderstone</a>
             </div>
         </div>
 
@@ -160,13 +160,9 @@
     <div id="fight-text-page" class="container-fluid d-none justify-content-center">
         <div class="m-2"
             style="width: 40rem;height: 10rem; background-image: url(assets/images/fight-text.png); background-size:cover">
-            <h2 class="fight-text m-4 text-light" style="text-shadow: 1px 1px 2px black;"></h2>
+            <h3 class="fight-text m-4 text-light" style="text-shadow: 1px 1px 2px black;"></h2>
         </div>
     </div>
-
-
-
-
 
     <br> <br> <br> <br> <br> <br>
     <footer class="bg-dark text-light text-center" style="height: 8vh; width:100%">

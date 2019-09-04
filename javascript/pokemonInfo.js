@@ -6,7 +6,7 @@ var pokemon005 = { name: "火恐龙", id: "005", hp: 58, level: 16, attack: 80, 
 var pokemon006 = { name: "喷火龙", id: "006", hp: 78, level: 36, attack: 109, defense: 85, evolutionLevel: 100 }
 
 //Features for Pikachu
-var pokemon025 = { name: "皮卡丘", id: "025", hp: 35, level: 5, attack: 55, defense: 40, evolutionLevel: 0 }
+var pokemon025 = { name: "皮卡丘", id: "025", hp: 35, level: 5, attack: 55, defense: 40, evolutionLevel: 100}
 var pokemon026 = { name: "雷丘", id: "026", hp: 60, level: 30, attack: 90, defense: 80, evolutionLevel: 100 }
 var pokemon2 = pokemon025;
 
