@@ -167,7 +167,7 @@
     <!-- The Celebration page; -->
     <div id="fight-win-page" class="container-fluid d-none justify-content-center">
         <div class="card" style="width: 26rem;">
-            <img src="assets/images/pokemons/150.png" class="card-img-top" alt="...">
+            <img id="winner-image" src="assets/images/pokemons/150.png" class="card-img-top" alt="...">
             <div class="card-body">
                 <h1 class="card-text text-center">WINNER!</h1>
             </div>
@@ -176,9 +176,30 @@
 
     <br> <br> <br> <br> <br> <br>
 
-    <audio id="music-tag">
-        <source id="music-playing" src="assets/sounds/backgroundMusic.mp3" type="audio/mpeg">
+
+    <!-- Music & Sounds. -->
+    <audio id="fight-audio" class="audios" preload="auto">
+        <source src="assets/sounds/fight.mp3" type="audio/mp3">
     </audio>
+    <audio id="recover-audio" class="audios" preload="auto">
+        <source src="assets/sounds/recover.mp3" type="audio/mp3">
+    </audio>
+    <audio id="evolution-audio" class="audios" preload="auto">
+        <source src="assets/sounds/evolution.mp3" type="audio/mp3">
+    </audio>
+    <audio id="setNext-audio" class="audios" preload="auto">
+        <source src="assets/sounds/setNext.mp3" type="audio/mp3">˛
+    </audio>
+    <audio id="winner-audio" class="audios" preload="auto">
+        <source src="assets/sounds/winner.mp3" type="audio/mp3">˛
+    </audio>
+    <audio id="150-audio" class="audios" preload="auto">
+        <source src="assets/sounds/150.mp3" type="audio/mp3">
+    </audio>
+    <audio id="025-audio" class="audios" preload="auto">
+        <source src="assets/sounds/025.mp3" type="audio/mp3">˛
+    </audio>
+
 
     <footer class="bg-dark text-light text-center" style="height: 8vh; width:100%">
         <p>Copyright</p>

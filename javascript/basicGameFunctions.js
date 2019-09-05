@@ -52,8 +52,6 @@ function changeToFightField() {
 
   $("#fight-text-page").removeClass("d-none");
   $("#fight-text-page").addClass("d-flex");
-
-  $("#fight-text").removeClass("d-none");
 }
 
 function printMyPokemonInfo() {
@@ -74,10 +72,6 @@ function printMyPokemonInfo() {
   }
 }
 
-function printMyImage() {
-
-}
-
 function printEnemyPokemonInfo() {
   $("#enemy-hp").text("HP = " + enemyHp + " / " + enemyPokemon.hp);
   $(".enemy-blood-bar").width(myToPercent(enemyHp / enemyPokemon.hp));
@@ -94,6 +88,7 @@ function setUpForFight() {
     case "025":
       myPokemon = pokemon025;
       $("#myPokemonFight").attr('src', "assets/images/pokemons/025.png");
+      $('#025-audio')[0].play();
       break;
     case "147":
       myPokemon = pokemon147;
@@ -102,6 +97,7 @@ function setUpForFight() {
     case "150":
       myPokemon = pokemon150;
       $("#myPokemonFight").attr('src', "assets/images/pokemons/150.png");
+      $('#150-audio')[0].play();
       break;
     case "216":
       myPokemon = pokemon216;
@@ -118,6 +114,7 @@ function setUpForFight() {
     case "025":
       enemyPokemon = pokemon025;
       $("#enemyPokemonFight").attr('src', "assets/images/pokemons/025.png");
+      $('#025-audio')[0].play();
       break;
     case "147":
       enemyPokemon = pokemon147;
@@ -126,6 +123,7 @@ function setUpForFight() {
     case "150":
       enemyPokemon = pokemon150;
       $("#enemyPokemonFight").attr('src', "assets/images/pokemons/150.png");
+      $('#150-audio')[0].play();
       break;
     case "216":
       enemyPokemon = pokemon216;
@@ -142,8 +140,7 @@ function setUpForFight() {
   printEnemyPokemonInfo();
 
   wordsChangeAndFade(myPokemon.name + " VS " + enemyPokemon.name);
-  // $("#music-tag").load();
-  // $("#music-tag").play();
+  $(".fight-text").text("What to do next?");
 
 }
 
@@ -182,14 +179,18 @@ function evolution() {
   }
   printMyPokemonInfo();
   wordsChangeAndFade(myPokemon.name + " VS " + enemyPokemon.name);
+
 }
 
 function checkEvolution() {
   if (myLevel >= myPokemon.evolutionLevel) {
     $(".fight-text").text(myPokemon.name + " is about to evolve!!!");
     disableButton();
+    var oldName = myPokemon.name;
+    $('#evolution-audio')[0].play();
     setTimeout(function () {
-      evolution(myPokemon);
+      evolution();
+      $(".fight-text").text(oldName + " has successfully evolved to " + myPokemon.name);
       enableButton();
     }, 1000);
   }
@@ -206,6 +207,7 @@ function setNextEnemy() {
       case "025":
         enemyPokemon = pokemon025;
         $("#enemyPokemonFight").attr('src', "assets/images/pokemons/025.png");
+        $('#025-audio')[0].play();
         break;
       case "147":
         enemyPokemon = pokemon147;
@@ -214,6 +216,7 @@ function setNextEnemy() {
       case "150":
         enemyPokemon = pokemon150;
         $("#enemyPokemonFight").attr('src', "assets/images/pokemons/150.png");
+        $('#150-audio')[0].play();
         break;
       case "216":
         enemyPokemon = pokemon216;
@@ -234,6 +237,7 @@ function setNextEnemy() {
       case "025":
         enemyPokemon = pokemon025;
         $("#enemyPokemonFight").attr('src', "assets/images/pokemons/025.png");
+        $('#025-audio')[0].play();
         break;
       case "147":
         enemyPokemon = pokemon147;
@@ -242,6 +246,7 @@ function setNextEnemy() {
       case "150":
         enemyPokemon = pokemon150;
         $("#enemyPokemonFight").attr('src', "assets/images/pokemons/150.png");
+        $('#150-audio')[0].play();
         break;
       case "216":
         enemyPokemon = pokemon216;
@@ -284,6 +289,44 @@ function winningCelebration() {
   $("#fight-win-page").removeClass("d-none");
   $("#fight-win-page").addClass("d-flex");
   wordsChangeAndFade("Congratulations!")
+
+  switch (myPokemon.id) {
+    case "004":
+      $("#winner-image").attr('src', "assets/images/pokemons/004.png");
+      break;
+    case "005":
+      $("#winner-image").attr('src', "assets/images/pokemons/005.png");
+      break;
+    case "006":
+      $("#winner-image").attr('src', "assets/images/pokemons/006.png");
+      break;
+    case "025":
+      $("#winner-image").attr('src', "assets/images/pokemons/025.png");
+      break;
+    case "026":
+      $("#winner-image").attr('src', "assets/images/pokemons/026.png");
+      break;
+    case "147":
+      $("#winner-image").attr('src', "assets/images/pokemons/147.png");
+      break;
+    case "148":
+      $("#winner-image").attr('src', "assets/images/pokemons/148.png");
+      break;
+    case "149":
+      $("#winner-image").attr('src', "assets/images/pokemons/149.png");
+      break;
+    case "150":
+      $("#winner-image").attr('src', "assets/images/pokemons/150.png");
+      break;
+    case "216":
+      $("#winner-image").attr('src', "assets/images/pokemons/216.png");
+      break;
+    case "217":
+      $("#winner-image").attr('src', "assets/images/pokemons/216.png");
+      break;
+  }
+  $('#fight-audio')[0].pause();
+  $('#winner-audio')[0].play();
 }
 
 function myToPercent(final) {

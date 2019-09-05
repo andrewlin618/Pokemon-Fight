@@ -31,6 +31,9 @@ function disableButton() {
 function enableButton() {
   //Picking Pokemon;
   $(".btn-pickMe").on("click", function () {
+
+    $('#fight-audio')[0].play();
+    
     //If done;
     if (enemyPokemonPicked >= 3) {
       return;
@@ -41,6 +44,7 @@ function enableButton() {
     setTimeout(function () {
       enableButton();
     }, 500);
+    
     //Pick my Pokemon;
     if (!myPokemonPicked) {
       myPokemonId = $(this).parent().parent().attr('pokemonId')
@@ -89,6 +93,7 @@ function enableButton() {
 
     //If enemy died;
     if (enemyHp <= 0) {
+      $('#setNext-audio')[0].play();
       $(".fight-text").text(myPokemon.name + " has beaten the " + enemyPokemon.name + " !");
       enemyHp = 0;
       printEnemyPokemonInfo();
@@ -144,6 +149,7 @@ function enableButton() {
       alert("You win! Refresh to restart!")
       return;
     }
+    $('#recover-audio')[0].play();
     myHp = parseInt(myPokemon.hp);
     $("#my-hp").text("HP = " + myHp + " / " + myPokemon.hp);
     $(".my-blood-bar").width("100%");
@@ -162,13 +168,15 @@ function enableButton() {
     }
 
     if (myPokemon.id === "025") {
-      $(".fight-text").text("皮卡丘 evolved into 雷丘 successfully!");
+      $(".fight-text").text(myPokemon.name + " is about to evolve!!!");
       disableButton();
+      var oldName = myPokemon.name;
+      $('#evolution-audio')[0].play();
       setTimeout(function () {
         evolution();
+        $(".fight-text").text(oldName + " has successfully evolved to " + myPokemon.name);
         enableButton();
-      }, 1000);
-
+      }, 3000);
     }
     else {
       $(".fight-text").text("Thunderstone has no effect on " + myPokemon.name + " .")
