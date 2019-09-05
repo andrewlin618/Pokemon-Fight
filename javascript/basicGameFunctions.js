@@ -192,7 +192,7 @@ function checkEvolution() {
       evolution();
       $(".fight-text").text(oldName + " has successfully evolved to " + myPokemon.name);
       enableButton();
-    }, 1000);
+    }, 3000);
   }
 }
 

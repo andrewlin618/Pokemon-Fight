@@ -145,10 +145,6 @@ function enableButton() {
       alert("You lose! Refresh to restart!")
       return;
     }
-    if (gameWinAlready) {
-      alert("You win! Refresh to restart!")
-      return;
-    }
     $('#recover-audio')[0].play();
     myHp = parseInt(myPokemon.hp);
     $("#my-hp").text("HP = " + myHp + " / " + myPokemon.hp);
