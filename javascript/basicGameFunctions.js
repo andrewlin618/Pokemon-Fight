@@ -54,11 +54,10 @@ function changeToFightField() {
   $("#fight-text-page").addClass("d-flex");
 
   $("#fight-text").removeClass("d-none");
-  wordsChangeAndFade("Fight!");
 }
 
 function printMyPokemonInfo() {
-  $("#my-hp").text("HP = " + myHp);
+  $("#my-hp").text("HP = " + myHp + " / " + myPokemon.hp);
   $(".my-blood-bar").width(myToPercent(myHp / myPokemon.hp));
   $("#my-level").text("LEVEL = " + myLevel);
   $("#my-attack").text("ATTACK = " + myPokemon.attack);
@@ -68,7 +67,7 @@ function printMyPokemonInfo() {
     $("#my-evolution").text("Evolution = ThunderStone")
   }
   else if (myPokemon.evolutionLevel == 100) {
-    $("#my-evolution").text("No more evolution...")
+    $("#my-evolution").text("No more...")
   }
   else {
     $("#my-evolution").text("Evolution = Level " + myPokemon.evolutionLevel)
@@ -80,7 +79,7 @@ function printMyImage() {
 }
 
 function printEnemyPokemonInfo() {
-  $("#enemy-hp").text("HP = " + enemyHp);
+  $("#enemy-hp").text("HP = " + enemyHp + " / " + enemyPokemon.hp);
   $(".enemy-blood-bar").width(myToPercent(enemyHp / enemyPokemon.hp));
   $("#enemy-attack").text("ATTACK = " + enemyPokemon.attack);
   $("#enemy-defense").text("DEFENSE = " + enemyPokemon.defense);
@@ -104,7 +103,7 @@ function setUpForFight() {
       myPokemon = pokemon150;
       $("#myPokemonFight").attr('src', "assets/images/pokemons/150.png");
       break;
-    case "16":
+    case "216":
       myPokemon = pokemon216;
       $("#myPokemonFight").attr('src', "assets/images/pokemons/216.png");
       break;
@@ -141,6 +140,11 @@ function setUpForFight() {
 
   enemyHp = enemyPokemon.hp;
   printEnemyPokemonInfo();
+
+  wordsChangeAndFade(myPokemon.name + " VS " + enemyPokemon.name);
+  // $("#music-tag").load();
+  // $("#music-tag").play();
+
 }
 
 function evolution() {
@@ -177,16 +181,17 @@ function evolution() {
       break;
   }
   printMyPokemonInfo();
+  wordsChangeAndFade(myPokemon.name + " VS " + enemyPokemon.name);
 }
 
-function checkEvolution(){
+function checkEvolution() {
   if (myLevel >= myPokemon.evolutionLevel) {
     $(".fight-text").text(myPokemon.name + " is about to evolve!!!");
     disableButton();
     setTimeout(function () {
       evolution(myPokemon);
       enableButton();
-    }, 2000); 
+    }, 1000);
   }
 }
 
@@ -252,18 +257,34 @@ function setNextEnemy() {
     $("#enemyPokemon3").fadeTo(1000, 0.2)
     $("#enemyPokemonFight").fadeTo(1000, 0.2)
     gameWinAlready = true;
-    $(".fight-text").text("You win! You are the champion!");
+    setTimeout(function () {
+      winningCelebration();
+    }, 1000);
   }
-};
-
+}
 
 function gameOver() {
-  $("#my-hp").text("HP = " + 0);
+  $("#my-hp").text("HP = " + 0 + " / " + myPokemon.hp);
   $(".my-blood-bar").width("0%");
   $("#myPokemon").fadeTo(1000, 0.2)
   $(".fight-text").text("You have no more pokemon, you need to go to the pokemon center!");
 }
 
+function winningCelebration() {
+  $("#pokemon-fighting-page").removeClass("d-flex");
+  $("#pokemon-fighting-page").addClass("d-none");
+  $(".fight-text").text("Congratulations!");
+
+  $("#fight-win-page").removeClass("d-none");
+  $("#fight-win-page").addClass("d-flex");
+
+  $("#fight-text-page").removeClass("d-flex");
+  $("#fight-text-page").addClass("d-none");
+
+  $("#fight-win-page").removeClass("d-none");
+  $("#fight-win-page").addClass("d-flex");
+  wordsChangeAndFade("Congratulations!")
+}
 
 function myToPercent(final) {
   return Math.floor((final * 100)) + "%";

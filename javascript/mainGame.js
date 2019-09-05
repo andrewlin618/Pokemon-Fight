@@ -1,5 +1,5 @@
-const DMIM = 0.03
-const DMIE = 0.05
+const DMIM = 0.05
+const DMIE = 0.07
 const DFI = 40
 
 var myPokemonPicked = false;
@@ -22,6 +22,7 @@ var gameOverAlready = false;
 var gameWinAlready = false;
 
 function disableButton() {
+  $(".btn-pickMe").off('click');
   $("#attackButton").off('click');
   $("#recoverButton").off('click');
   $("#thunderstoneButton").off('click');
@@ -34,10 +35,12 @@ function enableButton() {
     if (enemyPokemonPicked >= 3) {
       return;
     }
-  
-    $(this).parent().parent().fadeTo(100, 0.2);
+    disableButton();
+    $(this).parent().parent().fadeTo(500, 0.2);
     $(this).fadeOut();
-  
+    setTimeout(function () {
+      enableButton();
+    }, 500);
     //Pick my Pokemon;
     if (!myPokemonPicked) {
       myPokemonId = $(this).parent().parent().attr('pokemonId')
@@ -48,7 +51,6 @@ function enableButton() {
       myPokemonPicked = true;
       return;
     }
-  
     //Pick enemy Pokemon;
     enemyPokemonPicked++;
     if (enemyPokemonPicked == 1) {
@@ -94,12 +96,13 @@ function enableButton() {
       myLevel++;
       $("#my-level").text("LEVEL = " + myLevel);
       checkEvolution();
-      
+
       disableButton();
       setTimeout(function () {
         setNextEnemy();
         enableButton();
-      }, 2000);
+        wordsChangeAndFade(myPokemon.name + " VS " + enemyPokemon.name);
+      }, 1000);
     }
 
     //If enemy did not die;
@@ -116,14 +119,14 @@ function enableButton() {
 
       //Neither died;
       else {
-        $("#my-hp").text("HP = " + myHp);
+        $("#my-hp").text("HP = " + myHp + " / " + myPokemon.hp);
         $(".my-blood-bar").width(myToPercent(myHp / myPokemon.hp));
 
-        $("#enemy-hp").text("HP = " + enemyHp);
+        $("#enemy-hp").text("HP = " + enemyHp + " / " + enemyPokemon.hp);
         $(".enemy-blood-bar").width(myToPercent(enemyHp / enemyPokemon.hp));
 
         $(".fight-text").html(myPokemon.name + " caused &nbsp&nbsp&nbsp" + myDamage + " &nbsp&nbsp&nbsppoints damage to " + enemyPokemon.name + " ; <br> " + enemyPokemon.name + " caused &nbsp&nbsp&nbsp" + enemyDamage + "&nbsp&nbsp&nbsppoints damage to " + myPokemon.name + ";");
-        
+
         myLevel++;
         $("#my-level").text("LEVEL = " + myLevel);
         checkEvolution();
@@ -142,7 +145,7 @@ function enableButton() {
       return;
     }
     myHp = parseInt(myPokemon.hp);
-    $("#my-hp").text("HP = " + myHp);
+    $("#my-hp").text("HP = " + myHp + " / " + myPokemon.hp);
     $(".my-blood-bar").width("100%");
     $(".fight-text").text(myPokemon.name + " is fully recovered.")
   });
@@ -164,7 +167,7 @@ function enableButton() {
       setTimeout(function () {
         evolution();
         enableButton();
-      }, 2000);
+      }, 1000);
 
     }
     else {
