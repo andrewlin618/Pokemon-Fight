@@ -5,8 +5,7 @@
 - Step1. Pick up your pokemon 
 - Step2. Pick up your three enermies
 - Step3. Start fighting!
-
-## <a href="https://andrewlin618.github.io/Pokemon-Fight/" target="_blank">Try it!</a>
+- <a href="https://andrewlin618.github.io/Pokemon-Fight/" target="_blank">Try it!</a>
 
 ## Technology used
 - HTML
