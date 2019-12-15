@@ -16,7 +16,7 @@
 
 ## Support
 
-Reach out to me at one of the following places!
+> Reach out to me at one of the following places!
 
 - Tel:      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="tel:2068869131">`206-886-9131`</a>
 - Email:    &ensp; &nbsp; &nbsp; <a href="mailto:andrewlin618@gmail.com">`andrewlin618@gmail.com`</a>
