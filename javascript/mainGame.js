@@ -130,7 +130,7 @@ function enableButton() {
         $("#enemy-hp").text("HP = " + enemyHp + " / " + enemyPokemon.hp);
         $(".enemy-blood-bar").width(myToPercent(enemyHp / enemyPokemon.hp));
 
-        $(".fight-text").html(myPokemon.name + " caused &nbsp&nbsp&nbsp" + myDamage + " &nbsp&nbsp&nbsppoints damage to " + enemyPokemon.name + " ; <br> " + enemyPokemon.name + " caused &nbsp&nbsp&nbsp" + enemyDamage + "&nbsp&nbsp&nbsppoints damage to " + myPokemon.name + ";");
+        $(".fight-text").html(myPokemon.name + " caused &nbsp&nbsp" + myDamage + " &nbsp&nbsppoints damage to " + enemyPokemon.name + " ; <br> " + enemyPokemon.name + " caused &nbsp&nbsp&nbsp" + enemyDamage + "&nbsp&nbsp&nbsppoints damage to " + myPokemon.name + ";");
 
         myLevel++;
         $("#my-level").text("LEVEL = " + myLevel);
