@@ -15,6 +15,8 @@ Pick up your Pokemon and fight with three enemies!
 - CSS
 - jQuery
 
+## Stretch Goals
+- Add some Pokemon api to grab more Pokemons.
 
 ## Support
 
