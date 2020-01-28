@@ -1,4 +1,4 @@
-<img src="assets/images/screenshot.png" height=200px alt="Pokemon"></img>
+<img src="assets/images/screenshot.png" height=300px alt="Pokemon"></img>
 
 # Pokemon-Fight
 Pick up your Pokemon and fight with three enemies!
