@@ -13,6 +13,7 @@ Pick up your Pokemon and fight with three enemies!
 ## Technology used
 - HTML
 - CSS
+- Bootstrap
 - jQuery
 
 ## Stretch Goals
