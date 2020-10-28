@@ -1,8 +1,30 @@
+body {
+  background-color: rgb(255, 220, 123);
+}
+
+.myTitle {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  background-color: rgb(54, 54, 54);
+  animation: blinker 1.2s linear 10;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
 @media only screen and (max-width: 1200px) {
-    h2,.h2{
-        font-size: 0.5rem;
-    }
-    p{
-        font-size: 0.5rem;
-    }
+  body {
+    display: none;
+  }
+  h2,
+  .h2 {
+    font-size: 0.5rem;
+  }
+  p {
+    font-size: 0.5rem;
+  }
 }

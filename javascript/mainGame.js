@@ -49,7 +49,7 @@ function enableButton() {
     if (!myPokemonPicked) {
       myPokemonId = $(this).parent().parent().attr('pokemonId')
       setPokemon(myPokemonId, "setMyPokemon");
-      wordsChangeAndFade("Chose Your First Enemy!");
+      wordsChangeAndFade("2. Chose Your First Enemy!");
       $(".btn-pickMe").css('background-color', 'brown');
       $(".btn-pickMe").css('border-color', 'brown');
       myPokemonPicked = true;
@@ -60,12 +60,12 @@ function enableButton() {
     if (enemyPokemonPicked == 1) {
       enemyPokemonId1 = $(this).parent().parent().attr('pokemonId')
       setPokemon(enemyPokemonId1, "setEnemyPokemon1");
-      wordsChangeAndFade("Chose Your Second Enemy!");
+      wordsChangeAndFade("3. Chose Your Second Enemy!");
     }
     else if (enemyPokemonPicked == 2) {
       enemyPokemonId2 = $(this).parent().parent().attr('pokemonId')
       setPokemon(enemyPokemonId2, "setEnemyPokemon2");
-      wordsChangeAndFade("Chose Your Last Enemy!");
+      wordsChangeAndFade("4. Chose Your Last Enemy!");
     }
     else {
       enemyPokemonId3 = $(this).parent().parent().attr('pokemonId')
