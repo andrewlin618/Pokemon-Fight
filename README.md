@@ -1,12 +1,15 @@
 # Pokemon-Fight
-> Pick up your Pokemon and fight with three enemies!<br />
+Online pokemon game. <br />
 > [Live Game!](https://andrewlin618.github.io/Pokemon-Fight/)
 
 # About The Project
 <img src="assets/images/screenshot.gif" height=500px alt="Pokemon"></img>
 
-Different pokemon have different attack stats and defense stats, and both of them increase when leveling up.<br />
-I used the equation below to calculate the actual damage the pokemon made each round.
+## Ideas
+1. Different pokemon have different attack stats and defense stats, and both of them increase when leveling up.<br />
+2. The attach damage should be a range rather than a fixed number.
+
+## Solution
 ```
     //Calculate my damage;
     myDamage = Math.floor(Math.cbrt(myLevel) * DMIM * (0.8 + 0.4 * Math.random()) * myPokemon.attack * DFI / (enemyPokemon.defense + DFI));
@@ -17,7 +20,7 @@ I used the equation below to calculate the actual damage the pokemon made each r
     myHp = myHp - enemyDamage;
 ```
 > DMIM : Damage index of me;
-> DMIE : Damage index of enemy;
+> DMIE : Damage index of enemy;()
 > DFI  : Defence index;
 
 ## Build With
