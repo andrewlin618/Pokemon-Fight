@@ -2,23 +2,25 @@
 > Pick up your Pokemon and fight with three enemies!
 [Live](https://andrewlin618.github.io/Pokemon-Fight/)
 
-## About The Project
+# About The Project
 <img src="assets/images/screenshot.gif" height=500px alt="Pokemon"></img>
 
-## How to play
+## How To Play
 - Step1. Pick up your pokemon 
 - Step2. Pick up your three enemies
 - Step3. Start fighting!
-- <a href="https://andrewlin618.github.io/Pokemon-Fight/" target="_blank">Try it!</a>
 
-## Technology used
+## Build With
 - HTML
 - CSS
 - Bootstrap
 - jQuery
 
-## Stretch Goals
-- Add some Pokemon API to grab more Pokemons.
+# Getting Started
+
+## Prerequisites
+
+## Installation
 
 ## Support
 
