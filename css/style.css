@@ -2,12 +2,20 @@ body {
   background-color: rgb(255, 220, 123);
 }
 
+
 .myTitle {
   text-align: center;
   color: white;
-  font-size: 2rem;
+  font-size: 1.8rem;
   background-color: rgb(54, 54, 54);
   animation: blinker 1.2s linear 10;
+}
+
+footer {
+    position:fixed;
+    top: 93%;
+    height: 7%;
+    width: 100%
 }
 
 @keyframes blinker {
@@ -16,8 +24,8 @@ body {
   }
 }
 
-@media only screen and (max-width: 1200px) {
-  body {
+@media only screen and (max-width: 900px) {
+  main {
     display: none;
   }
   h2,

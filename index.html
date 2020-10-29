@@ -20,192 +20,188 @@
         </a>
     </nav>
 
-
-    <!-- The pokemons you chose; -->
-    <div class="row ml-5 mr-5 mt-2">
-        <div class="col-md-1 col-sm-1">
-            <div class="card" style="width: 7vw;">
-                <img id="myPokemon" src="assets/images/icons/icon1.png" class="card-img-top" alt="...">
-                <p class="text-center">My Pokemon</p>
+    <main>
+        <!-- The pokemons you chose; -->
+        <div class="row ml-5 mr-5 mt-2">
+            <div class="col-md-1 col-sm-1">
+                <div class="card" style="width: 7vw;">
+                    <img id="myPokemon" src="assets/images/icons/icon1.png" class="card-img-top" alt="...">
+                    <p class="text-center">My Pokemon</p>
+                </div>
             </div>
-        </div>
-        <div class="col-md-3 col-sm-3"></div>
-        <div class="col-md-4 col-sm-4 align-items-center">
-            <h2 id="instructionWord" class="display-7 mt-5 mb-5 myTitle">1. Chose your Pokemon!</h2>
-        </div>
-        <div class="col-md-1 col-sm-1"></div>
-        <div class="col-md-1 col-sm-1">
-            <div class="card" style="width: 5vw;">
-                <img id="enemyPokemon1" src="assets/images/icons/icon1.png" class="card-img-top" alt="...">
-                <p class="text-center">Enemy 1</p>
+            <div class="col-md-3 col-sm-3"></div>
+            <div class="col-md-4 col-sm-4 align-items-center">
+                <h2 id="instructionWord" class="display-7 mt-5 mb-5 myTitle">1. Chose your Pokemon!</h2>
             </div>
-        </div>
-        <div class="col-md-1 col-sm-1">
-            <div class="card" style="width: 5vw;">
-                <img id="enemyPokemon2" src="assets/images/icons/icon1.png" class="card-img-top" alt="...">
-                <p class="text-center">Enemy 2</p>
+            <div class="col-md-1 col-sm-1"></div>
+            <div class="col-md-1 col-sm-1">
+                <div class="card" style="width: 5vw;">
+                    <img id="enemyPokemon1" src="assets/images/icons/icon1.png" class="card-img-top" alt="...">
+                    <p class="text-center">Enemy 1</p>
+                </div>
             </div>
-        </div>
-        <div class="col-md-1">
-            <div class="card" style="width: 5vw;">
-                <img id="enemyPokemon3" src="assets/images/icons/icon1.png" class="card-img-top" alt="...">
-                <p class="text-center">Enemy 3</p>
+            <div class="col-md-1 col-sm-1">
+                <div class="card" style="width: 5vw;">
+                    <img id="enemyPokemon2" src="assets/images/icons/icon1.png" class="card-img-top" alt="...">
+                    <p class="text-center">Enemy 2</p>
+                </div>
             </div>
-        </div>
-    </div>
-
-    <!-- The pokemons picking page; -->
-    <div id="pokemon-picking-page" class="container-fluid d-flex justify-content-center">
-        <div class="card m-2" style="width: 16vw;" pokemonId="004">
-            <img src="assets/images/pokemons/004.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Charmander</h5>
-                <p class="card-text">HP = 39 <br>ATTACK = 60<br>DEFENSE = 50<br><br>EVOLUTION: Level 16</p>
-                <a href="#" class="btn btn-success btn-pickMe">Pick Me</a>
-            </div>
-        </div>
-        <div class="card m-2" style="width: 16vw;" pokemonId="025">
-            <img src="assets/images/pokemons/025.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Pikachu</h5>
-                <p class="card-text">HP = 35 <br>ATTACK = 55<br>DEFENSE = 40<br><br>EVOLUTION = Thunderstone </p>
-                <a href="#" class="btn btn-success btn-pickMe">Pick Me</a>
-            </div>
-        </div>
-        <div class="card m-2" style="width: 16vw" pokemonId="147">
-            <img src="assets/images/pokemons/147.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Dratini</h5>
-                <p class="card-text">HP = 41 <br>ATTACK = 64<br>DEFENSE = 45<br><br>EVOLUTION = Level 30
-                </p>
-                <a href="#" class="btn btn-success btn-pickMe">Pick Me</a>
-            </div>
-        </div>
-        <div class="card m-2" style="width: 16vw" pokemonId="150">
-            <img src="assets/images/pokemons/150.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Mewtwo</h5>
-                <p class="card-text">HP = 106 <br>ATTACK = 154<br>DEFENSE = 90<br><br>EVOLUTION = No more...
-                </p>
-                </p>
-                <button type="button" class="btn btn-success btn-pickMe" data-toggle="button" aria-pressed="false"
-                    autocomplete="off">
-                    Pick Me!!!
-                </button>
-            </div>
-        </div>
-        <div class="card m-2" style="width: 16vw" pokemonId="216">
-            <img src="assets/images/pokemons/216.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Teddiursa</h5>
-                <p class="card-text">HP = 60 <br>ATTACK = 80<br>DEFENSE = 50<br><br>EVOLUTION = Level 30
-                </p>
-                </p>
-                <button type="button" class="btn btn-success btn-pickMe" data-toggle="button" aria-pressed="false"
-                    autocomplete="off">
-                    Pick Me
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- The pokemons fighting page; -->
-    <div id="pokemon-fighting-page" class="container-fluid d-none justify-content-center">
-        <div class="m-2" style="width: 16rem;" pokemonId="">
-            <img id="myPokemonFight" src="assets/images/icons/icon1.png" class="card-img-top" alt="...">
-            <h3 id="myPokemonName" class="card-title text-center"></h3>
-        </div>
-        <div class="m-2" style="width: 18rem;">
-            <div class="card-body">
-                <div class="progress">
-                    <div class="progress-bar bg-success my-blood-bar" role="progressbar" style="width: 100%"
-                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                </div><br>
-                <h2 class="text-success" id="my-hp"><br></h2>
-                <h2 class="text-primary" id="my-level"></h2><br>
-                <p id="my-attack"></p>
-                <p id="my-defense"></p>
-                <p id="my-evolution"></p>
-            </div>
-        </div>
-        <div class="m-2" style="width: 22rem;">
-            <div class="row" style="width: 26rem;">
-                <img src="assets/images/icons/icon2.gif" style="width: 26rem" alt="...">
-            </div>
-            <div class="row d-flex justify-content-center">
-                <a id="attackButton" href="#" class="btn btn-danger btn-attack m-2">ATTACK</a>
-                <a id="recoverButton" href="#" class="btn btn-success btn-recover m-2">RECOVER</a>
-                <a id="thunderstoneButton" href="#" class="btn btn-secondary btn-thunderstone m-2">Thunderstone</a>
+            <div class="col-md-1">
+                <div class="card" style="width: 5vw;">
+                    <img id="enemyPokemon3" src="assets/images/icons/icon1.png" class="card-img-top" alt="...">
+                    <p class="text-center">Enemy 3</p>
+                </div>
             </div>
         </div>
 
-        <div class="m-2" style="width: 18rem;" pokemonId="">
-            <div class="card-body">
-                <div class="progress">
-                    <div class="progress-bar bg-success enemy-blood-bar" role="progressbar" style="width: 100%"
-                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                </div><br>
-                <h2 class="text-success" id="enemy-hp" class="card-text"><br></h2>
-                <br><br><br>
-                <p id="enemy-attack"></p>
-                <p id="enemy-defense"></p><br>
+        <!-- The pokemons picking page; -->
+        <div id="pokemon-picking-page" class="container-fluid d-flex justify-content-center">
+            <div class="card m-2" style="width: 16vw;" pokemonId="004">
+                <img src="assets/images/pokemons/004.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Charmander</h5>
+                    <p class="card-text">HP = 39 <br>ATTACK = 60<br>DEFENSE = 50<br><br>EVOLUTION: Level 16</p>
+                    <a href="#" class="btn btn-success btn-pickMe">Pick Me</a>
+                </div>
+            </div>
+            <div class="card m-2" style="width: 16vw;" pokemonId="025">
+                <img src="assets/images/pokemons/025.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Pikachu</h5>
+                    <p class="card-text">HP = 35 <br>ATTACK = 55<br>DEFENSE = 40<br><br>EVOLUTION = Thunderstone </p>
+                    <a href="#" class="btn btn-success btn-pickMe">Pick Me</a>
+                </div>
+            </div>
+            <div class="card m-2" style="width: 16vw" pokemonId="147">
+                <img src="assets/images/pokemons/147.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Dratini</h5>
+                    <p class="card-text">HP = 41 <br>ATTACK = 64<br>DEFENSE = 45<br><br>EVOLUTION = Level 30
+                    </p>
+                    <a href="#" class="btn btn-success btn-pickMe">Pick Me</a>
+                </div>
+            </div>
+            <div class="card m-2" style="width: 16vw" pokemonId="150">
+                <img src="assets/images/pokemons/150.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Mewtwo</h5>
+                    <p class="card-text">HP = 106 <br>ATTACK = 154<br>DEFENSE = 90<br><br>EVOLUTION = No more...
+                    </p>
+                    </p>
+                    <button type="button" class="btn btn-success btn-pickMe" data-toggle="button" aria-pressed="false"
+                        autocomplete="off">
+                        Pick Me!!!
+                    </button>
+                </div>
+            </div>
+            <div class="card m-2" style="width: 16vw" pokemonId="216">
+                <img src="assets/images/pokemons/216.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Teddiursa</h5>
+                    <p class="card-text">HP = 60 <br>ATTACK = 80<br>DEFENSE = 50<br><br>EVOLUTION = Level 30
+                    </p>
+                    </p>
+                    <button type="button" class="btn btn-success btn-pickMe" data-toggle="button" aria-pressed="false"
+                        autocomplete="off">
+                        Pick Me
+                    </button>
+                </div>
             </div>
         </div>
-        <div class="m-2" style="width: 16rem;">
-            <img id="enemyPokemonFight" src="assets/images/icons/icon1.png" class="card-img-top" alt="...">
-            <h3 id="enemyPokemonName" class="card-title text-center"></h3>
-        </div>
-    </div>
 
-    <!-- The text page; -->
-    <div id="fight-text-page" class="container-fluid d-none justify-content-center">
-        <div class="m-2"
-            style="width: 40rem;height: 10rem; background-image: url(assets/images/fight-text.png); background-size:cover">
-            <h4 class="fight-text m-4 text-light" style="text-shadow: 1px 1px 2px black;"></h4>
-        </div>
-    </div>
+        <!-- The pokemons fighting page; -->
+        <div id="pokemon-fighting-page" class="container-fluid d-none justify-content-center">
+            <div class="m-2" style="width: 16rem;" pokemonId="">
+                <img id="myPokemonFight" src="assets/images/icons/icon1.png" class="card-img-top" alt="...">
+                <h3 id="myPokemonName" class="card-title text-center"></h3>
+            </div>
+            <div class="m-2" style="width: 18rem;">
+                <div class="card-body">
+                    <div class="progress">
+                        <div class="progress-bar bg-success my-blood-bar" role="progressbar" style="width: 100%"
+                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div><br>
+                    <h2 class="text-success" id="my-hp"><br></h2>
+                    <h2 class="text-primary" id="my-level"></h2><br>
+                    <p id="my-attack"></p>
+                    <p id="my-defense"></p>
+                    <p id="my-evolution"></p>
+                </div>
+            </div>
+            <div class="m-2" style="width: 22rem;">
+                <div class="row" style="width: 26rem;">
+                    <img src="assets/images/icons/icon2.gif" style="width: 26rem" alt="...">
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <a id="attackButton" href="#" class="btn btn-danger btn-attack m-2">ATTACK</a>
+                    <a id="recoverButton" href="#" class="btn btn-success btn-recover m-2">RECOVER</a>
+                    <a id="thunderstoneButton" href="#" class="btn btn-secondary btn-thunderstone m-2">Thunderstone</a>
+                </div>
+            </div>
 
-    <!-- The Celebration page; -->
-    <div id="fight-win-page" class="container-fluid d-none justify-content-center">
-        <div class="card" style="width: 26rem;">
-            <img id="winner-image" src="assets/images/pokemons/150.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h1 class="card-text text-center">WINNER!</h1>
+            <div class="m-2" style="width: 18rem;" pokemonId="">
+                <div class="card-body">
+                    <div class="progress">
+                        <div class="progress-bar bg-success enemy-blood-bar" role="progressbar" style="width: 100%"
+                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div><br>
+                    <h2 class="text-success" id="enemy-hp" class="card-text"><br></h2>
+                    <br><br><br>
+                    <p id="enemy-attack"></p>
+                    <p id="enemy-defense"></p><br>
+                </div>
+            </div>
+            <div class="m-2" style="width: 16rem;">
+                <img id="enemyPokemonFight" src="assets/images/icons/icon1.png" class="card-img-top" alt="...">
+                <h3 id="enemyPokemonName" class="card-title text-center"></h3>
             </div>
         </div>
-    </div>
 
-    <br> <br> <br> <br> <br> <br>
+        <!-- The text page; -->
+        <div id="fight-text-page" class="container-fluid d-none justify-content-center">
+            <div class="m-2"
+                style="width: 40rem;height: 10rem; background-image: url(assets/images/fight-text.png); background-size:cover">
+                <h4 class="fight-text m-4 text-light" style="text-shadow: 1px 1px 2px black;"></h4>
+            </div>
+        </div>
 
+        <!-- The Celebration page; -->
+        <div id="fight-win-page" class="container-fluid d-none justify-content-center">
+            <div class="card" style="width: 26rem;">
+                <img id="winner-image" src="assets/images/pokemons/150.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h1 class="card-text text-center">WINNER!</h1>
+                </div>
+            </div>
+        </div>
 
-    <!-- Music & Sounds. -->
-    <audio id="fight-audio" class="audios" preload="auto">
-        <source src="assets/sounds/fight.mp3" type="audio/mp3">
-    </audio>
-    <audio id="recover-audio" class="audios" preload="auto">
-        <source src="assets/sounds/recover.mp3" type="audio/mp3">
-    </audio>
-    <audio id="evolution-audio" class="audios" preload="auto">
-        <source src="assets/sounds/evolution.mp3" type="audio/mp3">
-    </audio>
-    <audio id="setNext-audio" class="audios" preload="auto">
-        <source src="assets/sounds/setNext.mp3" type="audio/mp3">˛
-    </audio>
-    <audio id="winner-audio" class="audios" preload="auto">
-        <source src="assets/sounds/winner.mp3" type="audio/mp3">˛
-    </audio>
-    <audio id="150-audio" class="audios" preload="auto">
-        <source src="assets/sounds/150.mp3" type="audio/mp3">
-    </audio>
-    <audio id="025-audio" class="audios" preload="auto">
-        <source src="assets/sounds/025.mp3" type="audio/mp3">˛
-    </audio>
+        <!-- Music & Sounds. -->
+        <audio id="fight-audio" class="audios" preload="auto">
+            <source src="assets/sounds/fight.mp3" type="audio/mp3">
+        </audio>
+        <audio id="recover-audio" class="audios" preload="auto">
+            <source src="assets/sounds/recover.mp3" type="audio/mp3">
+        </audio>
+        <audio id="evolution-audio" class="audios" preload="auto">
+            <source src="assets/sounds/evolution.mp3" type="audio/mp3">
+        </audio>
+        <audio id="setNext-audio" class="audios" preload="auto">
+            <source src="assets/sounds/setNext.mp3" type="audio/mp3">˛
+        </audio>
+        <audio id="winner-audio" class="audios" preload="auto">
+            <source src="assets/sounds/winner.mp3" type="audio/mp3">˛
+        </audio>
+        <audio id="150-audio" class="audios" preload="auto">
+            <source src="assets/sounds/150.mp3" type="audio/mp3">
+        </audio>
+        <audio id="025-audio" class="audios" preload="auto">
+            <source src="assets/sounds/025.mp3" type="audio/mp3">˛
+        </audio>
+    </main>
 
-
-    <footer class="bg-dark text-light text-center" style="height: 8vh; width:100%">
-        <p>Copyright</p>
+    <footer class="bg-dark text-light text-center">
+        <p>Copyright @Andrew Lin</p>
     </footer>
-
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="javascript/pokemonInfo.js"></script>
