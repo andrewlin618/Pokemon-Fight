@@ -21,6 +21,11 @@
 ## Prerequisites
 
 ## Installation
+1. Clone the repo 
+```
+git clone https://github.com/andrewlin618/Pokemon-Fight.git
+```
+2. Run index.html in Chrome or Node.js
 
 ## Support
 
