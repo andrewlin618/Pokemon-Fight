@@ -1,7 +1,8 @@
-<img src="assets/images/screenshot.gif" height=500px alt="Pokemon"></img>
-
 # Pokemon-Fight
-Pick up your Pokemon and fight with three enemies!
+> Pick up your Pokemon and fight with three enemies!
+[Live](https://andrewlin618.github.io/Pokemon-Fight/)
+
+<img src="assets/images/screenshot.gif" height=500px alt="Pokemon"></img>
 
 ## How to play
 - Step1. Pick up your pokemon 
