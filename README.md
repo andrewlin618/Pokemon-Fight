@@ -1,15 +1,12 @@
 # Pokemon-Fight
-> Pick up your Pokemon and fight with three enemies!
-> [Live](https://andrewlin618.github.io/Pokemon-Fight/)
+> Pick up your Pokemon and fight with three enemies!<br />
+> [Live Game!](https://andrewlin618.github.io/Pokemon-Fight/)
 
 # About The Project
 <img src="assets/images/screenshot.gif" height=500px alt="Pokemon"></img>
 
-Different pokemon have different attack stats and defense stats, also both of them increase when leveling up.
+Different pokemon have different attack stats and defense stats, and both of them increase when leveling up.<br />
 I used the equation below to calculate the actual damage the pokemon made each round.
-> DMIM : Damage index of me;
-> DMIE : Damage index of enemy;
-> DFI  : Defence index;
 ```
     //Calculate my damage;
     myDamage = Math.floor(Math.cbrt(myLevel) * DMIM * (0.8 + 0.4 * Math.random()) * myPokemon.attack * DFI / (enemyPokemon.defense + DFI));
@@ -19,6 +16,9 @@ I used the equation below to calculate the actual damage the pokemon made each r
     enemyDamage = Math.floor(DMIE * (0.8 + 0.4 * Math.random()) * enemyPokemon.attack * DFI / (myPokemon.defense + DFI));
     myHp = myHp - enemyDamage;
 ```
+> DMIM : Damage index of me;
+> DMIE : Damage index of enemy;
+> DFI  : Defence index;
 
 ## Build With
 - HTML
@@ -33,7 +33,11 @@ I used the equation below to calculate the actual damage the pokemon made each r
 ```
 git clone https://github.com/andrewlin618/Pokemon-Fight.git
 ```
-2. Open index.html in your browser
+
+## Usage
+1. You can change the Pokemon's attributes in 'javascript/pokemonInfo.js';
+2. Open index.html in your browser;
+3. Enjoy the game!
 
 ## Support
 
