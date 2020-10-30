@@ -1,6 +1,6 @@
 # Pokemon-Fight
 Online pokemon game. <br />
-> [Live Game!](https://andrewlin618.github.io/Pokemon-Fight/)
+> <a href="https://andrewlin618.github.io/Pokemon-Fight" target="_blank">`Live Game!`</a>
 
 ## About The Project
 <img src="assets/images/screenshot.gif" height=500px alt="Pokemon"></img>
@@ -43,7 +43,7 @@ git clone https://github.com/andrewlin618/Pokemon-Fight.git
 3. Enjoy the game!
 
 ## Contact
-- Tel:      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `206-886-9131`
+- LinkedIn: &nbsp; <a href="https://www.linkedin.com/in/andrewlin618/" target="_blank">`Andrew Lin`</a>
 - Email:    &ensp; &nbsp; &nbsp; `andrewlin618@gmail.com`
-- LinkedIn: &nbsp; <a href="https://www.linkedin.com/in/andrew-lin-337592112/" target="_blank">`Andrew Lin`</a>
+
 
