@@ -1,9 +1,9 @@
 # Pokemon-Fight
 Online pokemon game. <br />
-[Live Game!](https://andrewlin618.github.io/Pokemon-Fight)
 
 ## About The Project
 <img src="assets/images/screenshot.gif" height=500px alt="Pokemon"></img>
+[Live Game!](https://andrewlin618.github.io/Pokemon-Fight)
 
 ### Ideas
 1. Different pokemon have different attack stats and defense stats, and both of them increase when leveling up.<br />
