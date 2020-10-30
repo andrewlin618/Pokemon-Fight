@@ -43,9 +43,6 @@ git clone https://github.com/andrewlin618/Pokemon-Fight.git
 3. Enjoy the game!
 
 ## Contact
-
-> Reach out to me at one of the following places!
-
 - Tel:      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `206-886-9131`
 - Email:    &ensp; &nbsp; &nbsp; `andrewlin618@gmail.com`
 - LinkedIn: &nbsp; <a href="https://www.linkedin.com/in/andrew-lin-337592112/" target="_blank">`Andrew Lin`</a>
