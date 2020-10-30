@@ -26,8 +26,8 @@ Online pokemon game. <br />
 ## Build With
 - HTML
 - CSS
-- Bootstrap
-- jQuery
+- Bootstrap.js
+- javaScript/jQuery
 
 # Getting Started
 
