@@ -3,7 +3,11 @@ Online pokemon game. <br />
 
 ## About The Project
 <img src="assets/images/screenshot.gif" height=500px alt="Pokemon"></img>
-[Live Game!](https://andrewlin618.github.io/Pokemon-Fight)
+
+[Play Game!](https://andrewlin618.github.io/Pokemon-Fight)
+1. Pick your pokemon.
+2. Pick your enemy pokemons.
+3. Start fighting!
 
 ### Ideas
 1. Different pokemon have different attack stats and defense stats, and both of them increase when leveling up.<br />
