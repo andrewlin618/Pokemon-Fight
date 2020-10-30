@@ -1,6 +1,17 @@
 # Pokemon-Fight
 Online pokemon game. <br />
 
+## Table of Contents
+* [About The Project](#about-the-project)
+  * [How To Play](#how-to-play)
+  * [Ideas](#ideas)
+  * [Solution](*solution)
+  * [Build With](#build-with)
+* [Getting Started](#getting-started)
+  * [Installation](#installation)
+  * [Usage](#usage)
+* [Contact](#contact)
+
 ## About The Project
 <img src="assets/images/screenshot.gif" height=500px alt="Pokemon"></img>
 
@@ -8,6 +19,7 @@ Online pokemon game. <br />
 1. Pick your pokemon.
 2. Pick your enemy pokemons.
 3. Start fighting!
+
 [Try it now!](https://andrewlin618.github.io/Pokemon-Fight)
 
 ### Ideas
