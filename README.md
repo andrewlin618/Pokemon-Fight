@@ -1,5 +1,6 @@
 # Pokemon-Fight
 Online pokemon game. <br />
+<img src="assets/images/screenshot.gif" height=500px alt="Pokemon"></img>
 
 ## Table of Contents
 * [About The Project](#about-the-project)
@@ -13,8 +14,6 @@ Online pokemon game. <br />
 * [Contact](#contact)
 
 ## About The Project
-<img src="assets/images/screenshot.gif" height=500px alt="Pokemon"></img>
-
 ### How to play
 1. Pick your pokemon.
 2. Pick your enemy pokemons.
