@@ -2,6 +2,7 @@
 Online pokemon game. <br />
 
 <img src="assets/images/screenshot.gif" height=500px alt="Pokemon"></img>
+<br />
 
 ## Table of Contents
 * [About The Project](#about-the-project)
@@ -13,6 +14,7 @@ Online pokemon game. <br />
   * [Installation](#installation)
   * [Usage](#usage)
 * [Contact](#contact)
+<br />
 
 ## About The Project
 ### How to play
